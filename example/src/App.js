@@ -1,10 +1,13 @@
 import React from 'react'
 
-import { ExampleComponent } from 'formhooks'
+import { useForm } from 'formhooks'
 import 'formhooks/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  const [handleChange] = useForm()
+  
+  
+  return <input name="test" onChange={ handleChange}/>
 }
 
 export default App
